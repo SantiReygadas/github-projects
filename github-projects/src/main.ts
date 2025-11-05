@@ -1,3 +1,4 @@
+// Incrementa el contador en 1
 export function increment(count: number): number {
   return count + 1;
 }
@@ -6,6 +7,7 @@ export function decrement(count: number): number {
   return count - 1;
 }
 
+// Función para resetear el contador
 export function reset(count: number): number {
   return 0;
 }
@@ -36,7 +38,6 @@ if (typeof document !== 'undefined') {
   };
   
   const updateDisplay = () => {
-    state.count = getCountFromStorage();
     const countElement = document.getElementById('count');
     if (countElement) {
       countElement.textContent = state.count.toString();
@@ -68,5 +69,6 @@ if (typeof document !== 'undefined') {
     });
   }
   
-  updateDisplay(); // Inicializar al cargar
+  // Inicializar al cargar: reflejar valor inicial y persistir
+  updateDisplay();
 }
