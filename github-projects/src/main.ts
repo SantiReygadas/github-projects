@@ -69,6 +69,5 @@ if (typeof document !== 'undefined') {
     });
   }
   
-  // Inicializar al cargar: reflejar valor inicial y persistir
   updateDisplay();
 }
