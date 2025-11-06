@@ -30,3 +30,4 @@ jobs:
         uses: docker/setup-buildx-action@v3
       - name: Build Docker Image
         run: docker build -t counter-nginx .
+        working-directory: github-projects
