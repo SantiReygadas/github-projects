@@ -12,7 +12,7 @@ COPY src/ ./src
 RUN npm run build
 
 # Copia los estáticos al output final
-RUN cp src/index.html dist/index.html && cp src/style.css dist/style.css
+RUN mkdir -p dist && cp src/index.html dist/index.html && cp src/style.css dist/style.css
 
 # Etapa 2: Servir con Nginx
 FROM nginx:1.25-alpine
